@@ -16,7 +16,14 @@ const Nav = () => {
           <a href="#">Find Facilities</a>
         </li>
         <li className="border-b-2 border-transparent hover:border-blue-500 transition-colors duration-300">
-          <a href="#">Find Player</a>
+          <a
+            href="#"
+            onClick={() => {
+              alert("Login to Find players in your Location");
+            }}
+          >
+            Find Player
+          </a>
         </li>
         <li className="border-b-2 border-transparent hover:border-blue-500 transition-colors duration-300">
           <a href="#">Events</a>
@@ -36,23 +43,24 @@ const Nav = () => {
       {/* Mobile Hamburger Icon */}
       <div className="md:hidden">
         <button onClick={() => setMenuOpen(!menuOpen)}>
-          {menuOpen ? <X size={55} /> : <Menu size={55} />}
+          {menuOpen ? <X size={53} /> : <Menu size={53} />}
         </button>
       </div>
 
       {/* Mobile Menu Dropdown */}
       {menuOpen && (
         <div className="absolute top-[90px] left-0 w-[28rem] bg-white shadow-md z-50 flex flex-col items-center gap-6 py-6 text-2xl font-medium md:hidden">
-          <a href="#" onClick={() => setMenuOpen(false)}>
-            Find Facilities
-          </a>
-          <a href="#" onClick={() => setMenuOpen(false)}>
+          <a href="#">Find Facilities</a>
+          <a
+            href="#"
+            onClick={() => {
+              alert("Login to Find players in your Location");
+            }}
+          >
             Find Player
           </a>
-          <a href="#" onClick={() => setMenuOpen(false)}>
-            Events
-          </a>
-          <button className="w-4/5 border-2 border-black hover:border-blue-500 py-2 rounded-md">
+          <a href="#">Events</a>
+          <button className="w-4/5 border-2 border-black hover:border-blue-500 py-2  rounded-md">
             Login
           </button>
           <button className="w-4/5 border-2 border-black hover:border-blue-500 py-2 rounded-md">

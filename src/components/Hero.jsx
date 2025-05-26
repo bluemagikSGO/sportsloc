@@ -20,7 +20,7 @@ const Hero = () => {
 
         <button
           className="bg-blue-500 p-3 px-5 rounded-md text-white font-semibold
-         hover:bg-blue-400 cursor-pointer"
+         hover:bg-blue-400 cursor-pointer focus:bg-blue-400"
         >
           Search
         </button>
