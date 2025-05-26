@@ -8,13 +8,13 @@ const Hero = () => {
       <p className="text-[1.5rem] mt-5 text-gray-500">
         Discover sport centers close to you and get active today.
       </p>
-      <div className="mt-8 flex justify-center items-center gap-7">
+      <div className="mt-8 flex md:flex-row flex-col justify-center items-center gap-7 ">
         <Loader />
 
         <input
           type="text"
           placeholder="Enter Location"
-          className="focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent border-1 border-gray-400 w-[35rem] px-5 py-3 rounded-md text-xl
+          className="focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent border-1 border-gray-400 md:w-[35rem] w-[25rem] px-5 py-3 rounded-md text-xl
            placeholder:text-left shadow-md"
         />
 
