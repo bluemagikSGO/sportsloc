@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+@theme {
+  --font-Ubuntu: "Ubuntu", "sans-serif";
+}
