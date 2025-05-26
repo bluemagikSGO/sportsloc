@@ -434,7 +434,7 @@ const SportsCardSelector = () => {
     <div
       className="max-w-6xl mx-auto p-6 mt-[5rem]"
       data-aos="fade-up"
-      data-aos-duration="3000"
+      data-aos-duration="2000"
     >
       <h2 className="text-2xl font-bold text-gray-800 mb-8 text-center">
         Select Your Sport
