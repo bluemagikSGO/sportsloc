@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react"; // hamburger and close icons
 import logo from "../images/sportslocLOGO.png";
+import LoginModal from "./LoginModal";
 
 const Nav = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -32,10 +33,13 @@ const Nav = () => {
 
       {/* Desktop Buttons */}
       <div className="hidden md:flex gap-4">
-        <button className="text-lg font-semibold border-2 border-black hover:border-blue-500 px-4 py-1 rounded-md">
+        <button
+          className="text-lg font-semibold border-2 border-black hover:border-blue-500 px-4 py-1 rounded-md cursor-pointer"
+          onClick={<LoginModal />}
+        >
           Login
         </button>
-        <button className="text-lg font-semibold border-2 border-black hover:border-blue-500 px-4 py-1 rounded-md">
+        <button className="text-lg font-semibold border-2 border-black hover:border-blue-500 px-4 py-1 rounded-md cursor-pointer">
           Sign Up
         </button>
       </div>
