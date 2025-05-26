@@ -67,7 +67,10 @@ const Nav = () => {
               Find Player
             </a>
             <a href="#">Events</a>
-            <button className="w-4/5 border-2 border-black hover:border-blue-500 py-2  rounded-md active:text-blue-500">
+            <button
+              onClick={() => setIsLoginModalOpen(true)}
+              className="w-4/5 border-2 border-black hover:border-blue-500 py-2  rounded-md active:text-blue-500"
+            >
               Login
             </button>
             <button className="w-4/5 border-2 border-black hover:border-blue-500 py-2 rounded-md active:text-blue-500">
