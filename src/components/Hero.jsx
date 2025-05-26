@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <div className="text-center md:mt-[5rem] mt-[1rem]">
       <h1 className="text-7xl font-bold">Find Sport Centers Near You</h1>
-      <p className="text-[1.5rem] mt-5 text-gray-500">
+      <p className="text-[1.5rem] mt-5 text-gray-500 mx-5">
         Discover sport centers close to you and get active today.
       </p>
       <div className="mt-8 flex md:flex-row flex-col justify-center items-center gap-7 ">
