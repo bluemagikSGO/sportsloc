@@ -17,7 +17,7 @@ const LoginModal = ({ isOpen, onClose }) => {
           placeholder="Password"
           className="w-full border p-2 mb-4 rounded"
         />
-        <button className="w-full bg-blue-500 hover:bg-blue-400 cursor-pointer text-white py-2 rounded mb-2">
+        <button className="w-full bg-blue-500 hover:bg-blue-400 active:bg-blue-400 cursor-pointer text-white py-2 rounded mb-2">
           Submit
         </button>
         <button

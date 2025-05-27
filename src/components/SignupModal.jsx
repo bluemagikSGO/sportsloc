@@ -23,7 +23,7 @@ const SignupModal = ({ isOpen, onClose }) => {
           placeholder="Password"
           className="w-full border p-2 mb-4 rounded"
         />
-        <button className="w-full hover:bg-blue-400 bg-blue-500 text-white py-2 rounded mb-2 cursor-pointer">
+        <button className="w-full hover:bg-blue-400 active:bg-blue-400 bg-blue-500 text-white py-2 rounded mb-2 cursor-pointer">
           Create Account
         </button>
         <button
