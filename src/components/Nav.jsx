@@ -71,15 +71,23 @@ const Nav = () => {
             >
               Find Player
             </a>
-            <a href="#">Events</a>
+            <a href="#" onClick={() => setMenuOpen(false)}>
+              Events
+            </a>
             <button
-              onClick={() => setIsLoginModalOpen(true)}
+              onClick={() => {
+                setIsLoginModalOpen(true);
+                setMenuOpen(false);
+              }}
               className="w-4/5 border-2 border-black hover:border-blue-500 py-2  rounded-md active:text-blue-500"
             >
               Login
             </button>
             <button
-              onClick={() => setShowSignup(true)}
+              onClick={() => {
+                setShowSignup(true);
+                setMenuOpen(false);
+              }}
               className="w-4/5 border-2 border-black hover:border-blue-500 py-2 rounded-md active:text-blue-500"
             >
               Sign Up
