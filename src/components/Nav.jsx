@@ -2,11 +2,17 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react"; // hamburger and close icons
 import logo from "../images/sportslocLOGO.png";
 import LoginModal from "./LoginModal";
+import SignupModal from "./SignupModal";
+import AlertCard from "./AlertCard";
 
 const Nav = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+
+  const [showSignup, setShowSignup] = useState(false);
+
+  const [showAlert, setShowAlert] = useState(false);
 
   return (
     <>
@@ -20,12 +26,7 @@ const Nav = () => {
             <a href="#">Find Facilities</a>
           </li>
           <li className="border-b-2 border-transparent hover:border-blue-500 transition-colors duration-300">
-            <a
-              href="#"
-              onClick={() => {
-                alert("Login to Find players in your Location");
-              }}
-            >
+            <a href="#" onClick={() => setShowAlert(true)}>
               Find Player
             </a>
           </li>
@@ -42,7 +43,10 @@ const Nav = () => {
           >
             Login
           </button>
-          <button className="text-lg font-semibold border-2 border-black hover:border-blue-500 px-4 py-1 rounded-md cursor-pointer">
+          <button
+            className="text-lg font-semibold border-2 border-black hover:border-blue-500 px-4 py-1 rounded-md cursor-pointer"
+            onClick={() => setShowSignup(true)}
+          >
             Sign Up
           </button>
         </div>
@@ -61,7 +65,8 @@ const Nav = () => {
             <a
               href="#"
               onClick={() => {
-                alert("Login to Find players in your Location");
+                setShowAlert(true);
+                setMenuOpen(false);
               }}
             >
               Find Player
@@ -73,7 +78,10 @@ const Nav = () => {
             >
               Login
             </button>
-            <button className="w-4/5 border-2 border-black hover:border-blue-500 py-2 rounded-md active:text-blue-500">
+            <button
+              onClick={() => setShowSignup(true)}
+              className="w-4/5 border-2 border-black hover:border-blue-500 py-2 rounded-md active:text-blue-500"
+            >
               Sign Up
             </button>
           </div>
@@ -83,6 +91,10 @@ const Nav = () => {
         isOpen={isLoginModalOpen}
         onClose={() => setIsLoginModalOpen(false)}
       />
+
+      <SignupModal isOpen={showSignup} onClose={() => setShowSignup(false)} />
+
+      <AlertCard isOpen={showAlert} onClose={() => setShowAlert(false)} />
     </>
   );
 };
